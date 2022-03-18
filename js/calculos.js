@@ -26,9 +26,12 @@ function factorial(nf) {
 function multiplosdehasta(n, m) {
     mensaje = "Los múltiplos de " + n + " hasta " + m + " son: "
     multiplo = 0;
-    for (i = 1; multiplo < m; i++) {
-        multiplo = n * i
+
+    i = 1
+    while (multiplo < m) {
+        multiplo = n * i;
         mensaje = mensaje + multiplo + " ";
+        i++;
     }
 
     return mensaje
@@ -57,4 +60,17 @@ function mostrarResultados(op, n1, n2 = 0) {
             break;
         default:
     }
+}
+// 654.729.075
+function productoImpar() {
+    
+    num = parseInt(
+        prompt("Teclee un número entero"));
+     
+    resultado = 1;
+    for (i = 1; i <= (num*2)-1; i = i + 2) {
+        resultado = resultado * i;
+    }
+    alert("El resultado es " + resultado)
+    
 }
