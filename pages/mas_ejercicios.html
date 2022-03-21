@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/calculos.js"></script>
+    <title>Más ejercicios</title>
+</head>
+
+<body>
+    <header>
+        <h1>Más ejercicios</h1>
+    </header>
+    <nav></nav>
+    <main>
+        <article>
+            <h2>Factorial de un número mediante prompt</h2>
+            <p>
+                <ul>
+                    <input type="button" onclick="n = leerNumero()" value="Primer número" />
+                </ul>
+            </p>
+            <script>
+                var n = 6;
+                document.write("<p>")
+                document.write("El factorial de " + n + " es " + factorial(n))
+                document.write("</p>")
+            </script>
+        </article>
+        <article>
+            <h2>Multiplos de m hasta n</h2>
+            <p>
+                <ul>
+                    <li><input type="button" onclick="n = leerNumero()" value="Primer número" /></li>
+                    <li><input type="button" onclick="m = leerNumero()" value="Segundo número" /></li>
+                </ul>
+            </p>
+            <script>
+                var a = 5;
+                var b = 30;
+                document.write(multiplosdehasta(a,b))
+            </script>
+        </article>
+        <article>
+            <h2>Suma de dos números</h2>
+            <p>
+                <script>
+                    var x = 5
+                    var y = 7
+                    document.write("La suma de "+ x +" e "+ y +" es igual a " + sumar (x, y))
+                </script>
+            </p>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

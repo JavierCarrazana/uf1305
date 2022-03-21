@@ -74,3 +74,8 @@ function productoImpar() {
     alert("El resultado es " + resultado)
     
 }
+
+function sumar (s1, s2) {
+    suma = s1 + s2;
+    return suma;
+}
