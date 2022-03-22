@@ -63,19 +63,44 @@ function mostrarResultados(op, n1, n2 = 0) {
 }
 // 654.729.075
 function productoImpar() {
-    
+
     num = parseInt(
         prompt("Teclee un número entero"));
-     
+
     resultado = 1;
-    for (i = 1; i <= (num*2)-1; i = i + 2) {
+    for (i = 1; i <= (num * 2) - 1; i = i + 2) {
         resultado = resultado * i;
     }
     alert("El resultado es " + resultado)
-    
+
 }
 
-function sumar (s1, s2) {
+function sumar(s1, s2) {
     suma = s1 + s2;
     return suma;
+}
+
+function leerTexto() {
+    escrito = prompt("Escribe el nombre del personaje");
+    return escrito;
+}
+
+
+function escribirTexto(id, texto) {
+    document.getElementById(id).innerHTML = texto;
+}
+
+/* function mostrarInfo(id, tag, info, texto) {
+    document.getElementById(id).innerHTML = "<" + tag + ">" + info + "</" + tag + ">" + ": " + texto;
+} */
+
+function mostrarInfo(id, tag, info, texto) {
+    
+    
+    var etiqueta = "<" + tag + ">"; 
+    etiqueta += info;
+    etiqueta += "</" + tag + ">";
+    etiqueta += ": " + texto;
+    
+    escribirTexto(id,etiqueta);
 }

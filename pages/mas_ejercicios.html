@@ -40,7 +40,7 @@
             <script>
                 var a = 5;
                 var b = 30;
-                document.write(multiplosdehasta(a,b))
+                document.write(multiplosdehasta(a, b))
             </script>
         </article>
         <article>
@@ -49,9 +49,27 @@
                 <script>
                     var x = 5
                     var y = 7
-                    document.write("La suma de "+ x +" e "+ y +" es igual a " + sumar (x, y))
+                    document.write("La suma de " + x + " e " + y + " es igual a " + sumar(x, y))
                 </script>
             </p>
+        </article>
+        <article>
+            <h2>El Método "getElementById"</h2>
+            <p>
+                <button type="button" onclick="pj=leerTexto()">Escribe el nombre del personaje</button>
+                <button onclick="mostrarInfo('pj1', 'strong','Personaje',pj)">Mostrar personaje</button>
+            </p>
+            <p>
+                <button type="button" onclick="clan=leerTexto()">Escribe el nombre del clan</button>
+                <button onclick="mostrarInfo('clan1', 'em','Clan',clan)">Mostrar clan</button>
+            </p>
+            <p>
+                <button type="button" onclick="aldea=leerTexto()">Escribe el nombre de la aldea</button>
+                <button onclick="mostrarInfo('ald1', 'strong','Aldea',aldea)">Mostrar aldea</button>
+            </p>
+            <p id="pj1"></p>
+            <p id="clan1"></p>
+            <p id="ald1"></p>
         </article>
     </main>
     <footer></footer>
