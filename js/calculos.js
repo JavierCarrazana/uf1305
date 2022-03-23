@@ -81,7 +81,7 @@ function sumar(s1, s2) {
 }
 
 function leerTexto() {
-    escrito = prompt("Escribe el nombre del personaje");
+    escrito = prompt("Escribe el nombre");
     return escrito;
 }
 
@@ -95,12 +95,47 @@ function escribirTexto(id, texto) {
 } */
 
 function mostrarInfo(id, tag, info, texto) {
-    
-    
-    var etiqueta = "<" + tag + ">"; 
+
+
+    var etiqueta = "<" + tag + ">";
     etiqueta += info;
     etiqueta += "</" + tag + ">";
     etiqueta += ": " + texto;
-    
-    escribirTexto(id,etiqueta);
+
+    escribirTexto(id, etiqueta);
+}
+
+/* function mostrarTodo(id1, id2, id3, texto1, texto2, texto3) {
+    document.getElementById(id1).innerHTML = texto1;
+    document.getElementById(id2).innerHTML = texto2;
+    document.getElementById(id3).innerHTML = texto3;
+
+} */
+
+function dameInfo(tag, info, texto) {
+
+    var etiqueta = "<" + tag + ">";
+    etiqueta += info;
+    etiqueta += "</" + tag + ">";
+    etiqueta += ": " + texto;
+
+    return contenido;
+}
+
+function mostrarTodo(id, personaje, aldea, clan, poder, vidas) {
+    //contenido = dameinfo('strong','Personaje',personaje);
+    //li += contenido;
+    var personaje = "<strong>Personaje: </strong>" + personaje;
+    var aldea = "<strong>Aldea: </strong>" + aldea;
+    var clan = "<strong>Clan: </strong>" + clan;
+    var poder = "<strong>Superpoder: </strong>" + poder;
+    var vidas = "<strong>Vidas: </strong>" + vidas;
+
+    var lis = "<li>" + personaje + "</li>";
+    lis += "<li>" + aldea + "</li>";
+    lis += "<li>" + clan + "</li>";
+    lis += "<li>" + poder + "</li>";
+    lis += "<li>" + vidas + "</li>";
+
+    document.getElementById(id).innerHTML = lis;
 }
