@@ -139,3 +139,43 @@ function mostrarTodo(id, personaje, aldea, clan, poder, vidas) {
 
     document.getElementById(id).innerHTML = lis;
 }
+
+function mostrarLista(id, personaje, aldea, clan, poder, vidas) {
+    //contenido = dameinfo('strong','Personaje',personaje);
+    //li += contenido;
+    var personaje = "<strong>Personaje: </strong>" + personaje;
+    var aldea = "<strong>Aldea: </strong>" + aldea;
+    var clan = "<strong>Clan: </strong>" + clan;
+    var poder = "<strong>Superpoder: </strong>" + poder;
+    var vidas = "<strong>Vidas: </strong>" + vidas;
+
+    /*     var lis = "<li>" + personaje + "</li>";
+        lis += "<li>" + aldea + "</li>";
+        lis += "<li>" + clan + "</li>";
+        lis += "<li>" + poder + "</li>";
+        lis += "<li>" + vidas + "</li>";
+
+        document.getElementById(id).innerHTML = lis; */
+
+    var item = document.createElement("li");
+    var lista = document.getElementById(id);
+
+    item.innerHTML = personaje;
+    lista.appendChild(item);
+
+    item = document.createElement("li");
+    item.innerHTML = clan;
+    lista.appendChild(item);
+
+    item = document.createElement("li");
+    item.innerHTML = aldea;
+    lista.appendChild(item);
+
+    item = document.createElement("li");
+    item.innerHTML = poder;
+    lista.appendChild(item);
+
+    item = document.createElement("li");
+    item.innerHTML = vidas;
+    lista.appendChild(item);
+}
