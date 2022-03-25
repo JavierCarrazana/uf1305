@@ -123,8 +123,7 @@ function dameInfo(tag, info, texto) {
 }
 
 function mostrarTodo(id, personaje, aldea, clan, poder, vidas) {
-    //contenido = dameinfo('strong','Personaje',personaje);
-    //li += contenido;
+
     var personaje = "<strong>Personaje: </strong>" + personaje;
     var aldea = "<strong>Aldea: </strong>" + aldea;
     var clan = "<strong>Clan: </strong>" + clan;
@@ -140,42 +139,137 @@ function mostrarTodo(id, personaje, aldea, clan, poder, vidas) {
     document.getElementById(id).innerHTML = lis;
 }
 
-function mostrarLista(id, personaje, aldea, clan, poder, vidas) {
-    //contenido = dameinfo('strong','Personaje',personaje);
-    //li += contenido;
+function mostrarElemento(id, personaje, aldea, clan, poder, vidas) {
+
     var personaje = "<strong>Personaje: </strong>" + personaje;
     var aldea = "<strong>Aldea: </strong>" + aldea;
     var clan = "<strong>Clan: </strong>" + clan;
     var poder = "<strong>Superpoder: </strong>" + poder;
     var vidas = "<strong>Vidas: </strong>" + vidas;
 
-    /*     var lis = "<li>" + personaje + "</li>";
-        lis += "<li>" + aldea + "</li>";
-        lis += "<li>" + clan + "</li>";
-        lis += "<li>" + poder + "</li>";
-        lis += "<li>" + vidas + "</li>";
-
-        document.getElementById(id).innerHTML = lis; */
-
-    var item = document.createElement("li");
+    // Creamos una instancia de la ul con id = datos
     var lista = document.getElementById(id);
 
-    item.innerHTML = personaje;
-    lista.appendChild(item);
+    addChild(lista, 'li', personaje);
+    addChild(lista, 'li', aldea);
+    addChild(lista, 'li', clan);
+    addChild(lista, 'li', poder);
+    addChild(lista, 'li', vidas);
+}
 
-    item = document.createElement("li");
-    item.innerHTML = clan;
-    lista.appendChild(item);
+// function addChild ( lista , 'li', personaje ) {
+function addChild(elemento, tag, contenido) {
+    item = document.createElement(tag);
+    item.innerHTML = contenido;
+    elemento.appendChild(item);
+}
 
-    item = document.createElement("li");
-    item.innerHTML = aldea;
-    lista.appendChild(item);
 
-    item = document.createElement("li");
-    item.innerHTML = poder;
-    lista.appendChild(item);
+function mostrarElemento2(id, personaje, aldea, clan, poder, vidas) {
 
-    item = document.createElement("li");
-    item.innerHTML = vidas;
-    lista.appendChild(item);
+    var strong = document.createElement("strong");
+    strong.innerHTML = "Personaje: ";
+    var personaje = strong.outerHTML + personaje;
+
+    strong = document.createElement("strong");
+    strong.innerHTML = "Aldea: ";
+    var aldea = strong.outerHTML + aldea;
+
+    strong = document.createElement("strong");
+    strong.innerHTML = "Clan: ";
+    var clan = strong.outerHTML + clan;
+
+    strong = document.createElement("strong");
+    strong.innerHTML = "Poder: ";
+    var poder = strong.outerHTML + poder;
+
+    strong = document.createElement("strong");
+    strong.innerHTML = "Vidas: ";
+    var vidas = strong.outerHTML + vidas;
+
+
+    // Creamos una instancia de la ul con id = datos
+    var lista = document.getElementById(id);
+
+    addChild(lista, 'li', personaje);
+    addChild(lista, 'li', aldea);
+    addChild(lista, 'li', clan);
+    addChild(lista, 'li', poder);
+    addChild(lista, 'li', vidas);
+}
+
+function mostrarElemento3(id, personaje, aldea, clan, poder, vidas) {
+
+    // Creamos una instancia de la ul con id = datos
+    var lista = document.getElementById(id);
+
+    /* //Personaje
+    var strong = document.createElement("strong");
+    var li = document.createElement("li");
+
+    strong.innerHTML = "Personaje: "
+    li.appendChild(strong);
+    li.innerHTML += personaje;
+    lista.appendChild(li);
+
+    //Aldea
+    strong = document.createElement("strong");
+    li = document.createElement("li");
+
+    strong.innerHTML = "Aldea: "
+    li.appendChild(strong);
+    li.innerHTML += aldea;
+    lista.appendChild(li);
+
+    //Clan
+    strong = document.createElement("strong");
+    li = document.createElement("li");
+
+    strong.innerHTML = "Clan: "
+    li.appendChild(strong);
+    li.innerHTML += clan;
+    lista.appendChild(li);
+
+    //Poder
+    strong = document.createElement("strong");
+    li = document.createElement("li");
+
+    strong.innerHTML = "Poder: "
+    li.appendChild(strong);
+    li.innerHTML += poder;
+    lista.appendChild(li);
+
+    //Clan
+    strong = document.createElement("strong");
+    li = document.createElement("li");
+
+    strong.innerHTML = "Clan: "
+    li.appendChild(strong);
+    li.innerHTML += vidas;
+    lista.appendChild(li); */
+
+    li = crearSubElemento("strong", "li", "Personaje: ", personaje)
+    lista.appendChild(li);
+
+    li = crearSubElemento("strong", "li", "Aldea: ", aldea)
+    lista.appendChild(li);
+    
+    li= crearSubElemento("strong", "li", "Clan: ", clan)
+    lista.appendChild(li);
+    
+    li= crearSubElemento("strong", "li", "Poder: ", poder)
+    lista.appendChild(li);
+    
+    li= crearSubElemento("strong", "li", "Vidas: ", vidas)
+    lista.appendChild(li);
+}
+
+function crearSubElemento(tag1, tag2, prefijo, sufijo) {
+    var subelemento = document.createElement(tag1);
+    subelemento.innerHTML = prefijo;
+    elemento.document.createElement(tag2);
+    elemento.appendChild(subelemento);
+    elemento.innerHTML += sufijo;
+
+    return elemento;
 }
