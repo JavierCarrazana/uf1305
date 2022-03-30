@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/cuadernillo.js"></script>
+    <script src="../js/adivina.js"></script>
+    <title>UF1305</title>
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <article>
+            <h2>Prácticas UF1305</h2>
+            <p>1. Pida el nombre del usuario y muéstrelo en un id="Nombre"</p>
+
+        </article>
+        <article>
+            <p><button type="button" onclick="nombre=leerTexto()">Escriba su nombre</button></p>
+            <p><button onclick="escribirTexto('nombre', nombre + ' , piensa en un número del 0 al 10')">Mostrar
+                    ejercicio</button>
+        </article>
+        </p>
+        <article>
+            <script>
+                adivina()
+            </script>
+        </article>
+        <article id="nombre"></article>
+        <article id="respuesta"></article>
+        
+    </main>
+    <footer></footer>
+</body>
+
+</html>
